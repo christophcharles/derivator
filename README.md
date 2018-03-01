@@ -64,7 +64,7 @@ We can now differentiate:
 *Main> res = diff fX fY
 ```
 
-To display the result, you can either use the show, which will output a LaTeX expression, or mathExport and symExport which will export a Mathematica and SymPy (TODO) expression respectively.
+To display the result, you can either use the `show` function, which will output a LaTeX expression, or `mathExport` and `symExport` which will export a Mathematica and SymPy (still in development) expression respectively.
 
 ```
 *Main> res
@@ -81,7 +81,7 @@ This solves a few problems at the price of readability. For instance, this is ho
 *Main> integral = Symbol (Int (fX) (varX))
 ```
 
-The idea is the integral is something very specific to functionnals and cannot be integrated into a generic expression easily. But, it can be introduced as a symbol that will have expression parts and which implements itself its derivation rules. Therefore, we can compute the derivative with respect to f(y) in the following way:
+The idea is the integral is something very specific to functionnals and cannot be integrated into a generic expression easily. But, it can be introduced as a symbol that will have expression parts and which implements itself its differentiation rules rules. Therefore, we can compute the derivative with respect to f(y) in the following way:
 
 ```
 *Main> res = diff integral fY
